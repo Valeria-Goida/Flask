@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тригонометрические вычисления</title>
+</head>
+<body>
+    <h1>Тригонометрические функции</h1>
+    <form method="POST">
+        <label for="angle">Введите угол:</label>
+        <input type="text" id="angle" name="angle" required><br><br>
+
+        <label for="unit">Выберите единицу измерения:</label>
+        <select id="unit" name="unit">
+            <option value="radians">Радианы</option>
+            <option value="degrees">Градусы</option>
+        </select><br><br>
+
+        <label for="function">Выберите функцию:</label>
+        <select id="function" name="function">
+            <option value="sin">Sin</option>
+            <option value="cos">Cos</option>
+            <option value="tan">Tan</option>
+        </select><br><br>
+
+        <label for="precision">Точность (кол-во знаков после запятой):</label>
+        <input type="number" id="precision" name="precision" min="0" required><br><br>
+
+        <input type="submit" value="Вычислить">
+    </form>
+
+    {% if result is not none %}
+        <h2>Результат: {{ result }}</h2>
+    <h2>Гойда (ПИН-232)</h2>
+    {% endif %}
+</body>
+</html>
